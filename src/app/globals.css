@@ -80,21 +80,17 @@ button {
 .image-marquee {
   overflow: hidden;
 }
+.image-marquee-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+.image-marquee-scroll::-webkit-scrollbar {
+  display: none;
+}
 .image-marquee-track {
   display: flex;
   width: max-content;
-  animation: image-marquee-scroll 32s linear infinite;
-}
-.image-marquee:hover .image-marquee-track {
-  animation-play-state: paused;
-}
-@keyframes image-marquee-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }
 @keyframes hero-image-shake {
   0%,
@@ -145,9 +141,6 @@ button {
     animation-duration: 0.01ms !important;
   }
   .announcement-track {
-    animation: none;
-  }
-  .image-marquee-track {
     animation: none;
   }
 }

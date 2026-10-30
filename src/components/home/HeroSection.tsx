@@ -7,9 +7,10 @@ import { images } from "@/config/images";
 
 export function HeroSection() {
   const [active, setActive] = useState(0);
-  const [shaking, setShaking] = useState(false);
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const isInteracting = useRef(false);
+  const isProgrammaticScroll = useRef(false);
+  const settleTimer = useRef<number | null>(null);
   const slides = images.heroSlides;
 
   useEffect(() => {
@@ -18,33 +19,51 @@ export function HeroSection() {
       setActive((current) => (current + 1) % slides.length);
     }, 5000);
 
-    return () => window.clearInterval(timer);
+    return () => {
+      window.clearInterval(timer);
+      if (settleTimer.current) {
+        window.clearTimeout(settleTimer.current);
+      }
+    };
   }, [slides.length]);
-
-  useEffect(() => {
-    setShaking(true);
-    const timer = window.setTimeout(() => setShaking(false), 450);
-    return () => window.clearTimeout(timer);
-  }, [active]);
 
   useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
+    isProgrammaticScroll.current = true;
     container.scrollTo({
       left: container.clientWidth * active,
       behavior: "smooth",
     });
+
+    const timer = window.setTimeout(() => {
+      isProgrammaticScroll.current = false;
+    }, 500);
+
+    return () => window.clearTimeout(timer);
   }, [active]);
 
   const handleScroll = () => {
     const container = scrollRef.current;
-    if (!container || container.clientWidth === 0) return;
-
-    const next = Math.round(container.scrollLeft / container.clientWidth);
-    if (next !== active && next >= 0 && next < slides.length) {
-      setActive(next);
+    if (
+      !container ||
+      container.clientWidth === 0 ||
+      isProgrammaticScroll.current
+    ) {
+      return;
     }
+
+    if (settleTimer.current) {
+      window.clearTimeout(settleTimer.current);
+    }
+
+    settleTimer.current = window.setTimeout(() => {
+      const next = Math.round(container.scrollLeft / container.clientWidth);
+      if (next !== active && next >= 0 && next < slides.length) {
+        setActive(next);
+      }
+    }, 120);
   };
 
   const current = slides[active];
@@ -56,6 +75,7 @@ export function HeroSection() {
         onScroll={handleScroll}
         onPointerDown={() => {
           isInteracting.current = true;
+          isProgrammaticScroll.current = false;
         }}
         onPointerUp={() => {
           isInteracting.current = false;
@@ -71,9 +91,8 @@ export function HeroSection() {
             <img
               src={slide.src}
               alt=""
-              className={`h-full w-full object-cover object-center ${
-                index === active && shaking ? "hero-image-shake" : ""
-              }`}
+              className="h-full w-full object-cover object-center"
+              loading={index === 0 ? "eager" : "lazy"}
             />
           </div>
         ))}
@@ -83,7 +102,7 @@ export function HeroSection() {
         ◉
       </div>
 
-      <div className="container relative flex min-h-[19rem] max-w-3xl items-center justify-center px-4 py-7 text-center sm:min-h-[23rem] sm:py-10">
+      <div className="container pointer-events-none relative flex min-h-[19rem] max-w-3xl items-center justify-center px-4 py-7 text-center sm:min-h-[23rem] sm:py-10">
         <div className="drop-shadow-[0_2px_5px_rgba(0,0,0,0.75)]">
           <p className="text-xs font-extrabold uppercase tracking-[0.14em] text-blue-100">
             {current.eyebrow}
@@ -96,14 +115,14 @@ export function HeroSection() {
           </p>
           <div className="mt-4 flex justify-center gap-2">
             <Link
-              className="rounded-full bg-blue px-4 py-2 text-xs font-bold text-white transition hover:bg-white hover:text-navy sm:px-5 sm:py-2.5 sm:text-sm"
+              className="pointer-events-auto rounded-full bg-blue px-4 py-2 text-xs font-bold text-white transition hover:bg-white hover:text-navy sm:px-5 sm:py-2.5 sm:text-sm"
               href="/store"
             >
               Explore CCTV store{" "}
               <ArrowRight className="ml-1 inline" size={15} />
             </Link>
             <Link
-              className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-bold text-white transition hover:bg-white hover:text-navy sm:px-5 sm:py-2.5 sm:text-sm"
+              className="pointer-events-auto rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs font-bold text-white transition hover:bg-white hover:text-navy sm:px-5 sm:py-2.5 sm:text-sm"
               href="/request-quote"
             >
               Request a quote
@@ -130,7 +149,7 @@ export function HeroSection() {
                 aria-label={`Show hero slide ${index + 1}`}
                 aria-current={index === active}
                 onClick={() => setActive(index)}
-                className={`h-1.5 rounded-full transition-all ${
+                className={`pointer-events-auto h-1.5 rounded-full transition-all ${
                   index === active ? "w-8 bg-white" : "w-2 bg-white/50"
                 }`}
               />

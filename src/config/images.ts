@@ -2,7 +2,23 @@ export const images = {
   logo: "/images/brand/logo.jpg",
   heroSlides: [
     {
-      src: "/images/heroes/installation-exterior.webp",
+      src: "/images/products/kent-home-camera.webp",
+      alt: "Outdoor surveillance camera installed on a residential property",
+      eyebrow: "Outdoor protection",
+      title: "Keep an eye on what matters.",
+      description:
+        "Weather-ready surveillance designed to help protect entrances, driveways and perimeter spaces.",
+    },
+     {
+      src: "/images/references/catalog-asset-20.avif",
+      alt: "CCTV camera used in an office environment",
+      eyebrow: "Business surveillance",
+      title: "A clearer view of your business.",
+      description:
+        "Plan practical coverage for entrances, work areas, customer spaces and stock rooms.",
+    },
+    {
+      src: "/images/references/catalog-asset-07.avif",
       alt: "Outdoor surveillance camera installed on a residential property",
       eyebrow: "Outdoor protection",
       title: "Keep an eye on what matters.",
@@ -18,7 +34,7 @@ export const images = {
         "Choose dependable cameras and practical guidance for clearer monitoring in every light.",
     },
     {
-      src: "/images/heroes/home-camera-installation.jpeg",
+      src: "/images/references/catalog-asset-21.avif",
       alt: "Security camera monitoring a residential driveway",
       eyebrow: "Home security",
       title: "Confidence starts at the entrance.",
@@ -26,7 +42,7 @@ export const images = {
         "Build a straightforward home surveillance setup around the places that matter most.",
     },
     {
-      src: "/images/products/outdoor-bullet-camera.jpeg",
+      src: "/images/references/catalog-asset-03.avif",
       alt: "Outdoor bullet CCTV camera",
       eyebrow: "Weather-ready cameras",
       title: "Protection built for the outdoors.",
@@ -42,7 +58,7 @@ export const images = {
         "Discreet indoor surveillance for homes, offices, shops and shared spaces.",
     },
     {
-      src: "/images/references/camera-office-reference.jpeg",
+      src: "/images/references/catalog-asset-16.avif",
       alt: "CCTV camera used in an office environment",
       eyebrow: "Business surveillance",
       title: "A clearer view of your business.",

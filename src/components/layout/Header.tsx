@@ -53,7 +53,7 @@ export function Header() {
             <strong className="block text-lg leading-none text-navy">
               CCTV <span className="text-blue">Care</span>
             </strong>
-            <small className="text-[10px] font-bold uppercase tracking-widest text-blue">
+            <small className="text-[7px] font-bold uppercase tracking-widest text-blue">
               See. Secure. Support.
             </small>
           </span>

@@ -17,14 +17,28 @@ export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-white/95 backdrop-blur">
       <div className="bg-navy text-white">
-        <div className="container flex min-h-9 items-center justify-between text-xs">
-          <span>Professional surveillance solutions across Nigeria</span>
-          <span className="hidden sm:inline">
-            Demo storefront — prices and checkout are illustrative
-          </span>
+        <div className="overflow-hidden py-1 text-xs font-bold">
+          <div className="announcement-track">
+            <div className="flex items-center gap-8 px-4">
+              <span>Professional surveillance solutions across Nigeria</span>
+              <span>
+                Demo storefront — prices and checkout are illustrative.
+              </span>
+              <span>Nationwide installation and technical support.</span>
+              <span>Browse cameras, kits, recorders and accessories.</span>
+            </div>
+            <div className="flex items-center gap-8 px-4" aria-hidden="true">
+              <span>Professional surveillance solutions across Nigeria</span>
+              <span>
+                Demo storefront — prices and checkout are illustrative.
+              </span>
+              <span>Nationwide installation and technical support.</span>
+              <span>Browse cameras, kits, recorders and accessories.</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="container flex h-[74px] items-center justify-between gap-5">
+      <div className="container flex h-[54px] items-center justify-between gap-5">
         <Link
           href="/"
           className="focus-ring flex items-center gap-3"
@@ -37,7 +51,7 @@ export function Header() {
           />
           <span>
             <strong className="block text-lg leading-none text-navy">
-              CCTV Care
+              CCTV <span className="text-blue">Care</span>
             </strong>
             <small className="text-[10px] font-bold uppercase tracking-widest text-blue">
               See. Secure. Support.

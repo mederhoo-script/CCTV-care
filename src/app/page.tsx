@@ -1,81 +1,14 @@
 import Link from "next/link";
-import {
-  ArrowRight,
-  CheckCircle2,
-  Eye,
-  ShieldCheck,
-  Wrench,
-} from "lucide-react";
+import { ArrowRight, Eye, Wrench } from "lucide-react";
 import { categories, products, projects, services } from "@/data/catalog";
 import { ProductCard } from "@/components/store/ProductCard";
-import { HeroCarousel } from "@/components/home/HeroCarousel";
-import { images } from "@/config/images";
+import { HeroSection } from "@/components/home/HeroSection";
+import { ImageMarquee } from "@/components/home/ImageMarquee";
 export default function Home() {
   return (
     <>
-      <section className="grid-pattern overflow-hidden bg-mist">
-        <div className="container grid items-center gap-6 py-8 md:grid-cols-[1.05fr_.95fr] md:gap-10 md:py-12">
-          <div>
-            <p className="eyebrow">Surveillance, made dependable</p>
-            <h1 className="mt-3 max-w-2xl text-3xl font-black leading-[1.04] tracking-tight text-navy sm:text-5xl">
-              See what matters.{" "}
-              <span className="text-blue">Secure what counts.</span>
-            </h1>
-            <p className="mt-4 max-w-xl text-base leading-7 text-ink/70 sm:text-lg">
-              Professional CCTV installation, quality equipment and practical
-              support for homes and businesses across Nigeria.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2.5">
-              <Link
-                className="rounded-full bg-blue px-5 py-3 text-sm font-bold text-white hover:bg-navy"
-                href="/store"
-              >
-                Explore CCTV store{" "}
-                <ArrowRight className="ml-1 inline" size={16} />
-              </Link>
-              <Link
-                className="rounded-full border border-navy/20 bg-white px-5 py-3 text-sm font-bold text-navy hover:border-blue hover:text-blue"
-                href="/request-quote"
-              >
-                Request a quote
-              </Link>
-            </div>
-            <div className="mt-5 hidden flex-wrap gap-5 text-sm font-bold text-navy sm:flex">
-              <span>
-                <CheckCircle2 className="mr-1 inline text-blue" size={17} />{" "}
-                Demo-ready catalogue
-              </span>
-              <span>
-                <CheckCircle2 className="mr-1 inline text-blue" size={17} />{" "}
-                Nationwide coverage
-              </span>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="overflow-hidden rounded-[2rem] shadow-card">
-              <img
-                className="h-44 w-full object-cover sm:h-64 md:h-72"
-                src={images.heroSlides[0].src}
-                alt={images.heroSlides[0].alt}
-              />
-            </div>
-            <div className="absolute bottom-3 left-3 rounded-xl bg-navy/95 px-3 py-2 text-white shadow-xl sm:bottom-5 sm:left-5 sm:px-5 sm:py-3">
-              <div className="mb-1 flex items-center gap-2 text-blue">
-                <ShieldCheck size={15} />
-                <span className="text-[10px] font-bold uppercase tracking-wider">
-                  Built around clarity
-                </span>
-              </div>
-              <strong className="text-sm sm:text-base">
-                A plan for every property
-              </strong>
-            </div>
-          </div>
-        </div>
-        <div className="container pb-7 md:pb-10">
-          <HeroCarousel />
-        </div>
-      </section>
+      <HeroSection />
+      <ImageMarquee />
       <section className="section">
         <div className="container">
           <div className="flex items-end justify-between gap-5">
@@ -89,7 +22,7 @@ export default function Home() {
               View all products <ArrowRight className="ml-1 inline" size={17} />
             </Link>
           </div>
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3">
             {categories.map((c) => (
               <Link
                 href={`/store/${c.slug}`}
@@ -98,13 +31,15 @@ export default function Home() {
               >
                 <img
                   src={c.image}
-                  alt=""
-                  className="aspect-[1.5] w-full object-cover opacity-65 transition group-hover:scale-105 group-hover:opacity-80"
+                  alt={c.name}
+                  className="aspect-square w-full object-cover opacity-65 transition group-hover:scale-105 group-hover:opacity-80 sm:aspect-[1.5]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent" />
-                <div className="absolute bottom-0 p-5 text-white">
-                  <h3 className="text-lg font-bold">{c.name}</h3>
-                  <p className="mt-1 text-sm text-white/75">{c.description}</p>
+                <div className="absolute bottom-0 p-3 text-white sm:p-5">
+                  <h3 className="text-sm font-bold sm:text-lg">{c.name}</h3>
+                  <p className="mt-1 hidden text-sm text-white/75 sm:block">
+                    {c.description}
+                  </p>
                 </div>
               </Link>
             ))}

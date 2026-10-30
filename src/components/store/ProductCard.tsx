@@ -31,17 +31,17 @@ export function ProductCard({ product }: { product: Product }) {
         </button>
       </div>
       <Link href={`/products/${product.slug}`} className="block">
-        <div className="pt-3 sm:pt-4">
+        <div className="pt-2 sm:pt-2">
           <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.14em] text-blue sm:text-xs">
             {product.brand}
           </p>
-          <h3 className="min-h-10 text-sm font-bold leading-5 text-navy sm:text-base">
+          <h3 className="min-h-3 text-sm font-bold leading-5 text-navy sm:text-base">
             {product.name}
           </h3>
           <p className="mt-1 line-clamp-2 text-xs leading-5 text-ink/60 sm:text-sm">
             {product.shortDescription}
           </p>
-          <div className="mt-2 flex items-end justify-between gap-2">
+          <div className="mt-0 flex items-end justify-between gap-2">
             <div>
               <strong className="block text-sm text-navy sm:text-base">
                 {formatNaira(product.priceNGN)}

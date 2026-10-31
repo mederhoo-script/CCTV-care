@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   },
   description:
     "Professional CCTV installation, surveillance equipment and technical support across Nigeria.",
+  icons: {
+    icon: "/icon.jpg",
+    shortcut: "/icon.jpg",
+    apple: "/icon.jpg",
+  },
   openGraph: {
     title: "CCTV Care",
     description: "Security you can see. Confidence you can feel.",

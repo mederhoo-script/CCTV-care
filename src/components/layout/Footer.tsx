@@ -58,7 +58,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 py-5 text-center text-xs text-white/45">
         © {new Date().getFullYear()} CCTV Care. Phase 1 demo experience —
-        verify business details before launch.
+        Design By MEDERHOO.
       </div>
     </footer>
   );

@@ -25,8 +25,8 @@ export default function Quote() {
       <p className="eyebrow">Start a conversation</p>
       <h1 className="mt-3 text-4xl font-black text-navy">Request a quote</h1>
       <p className="mt-4 max-w-2xl text-lg leading-8 text-ink/65">
-        Tell us a little about the property and what you want to achieve. This
-        demo form does not save to a database.
+        Tell us a little about the property and what you want to achieve. Our
+        team will review your enquiry and follow up with the next steps.
       </p>
       <form
         className="mt-9 rounded-2xl border border-line p-6 sm:p-8"
@@ -149,8 +149,8 @@ export default function Quote() {
         )}
         {sent ? (
           <div className="mt-6 rounded-xl bg-emerald-50 p-5 text-sm leading-6 text-emerald-800">
-            Demo request prepared. It has not been saved or sent by this
-            website.
+            Your request has been prepared for follow-up. It has not been sent
+            until you choose to continue in WhatsApp.
             {link && (
               <a
                 href={link}

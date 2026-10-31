@@ -10,7 +10,7 @@ const pages: Record<
     sections: [
       [
         "Delivery estimates",
-        "Delivery timelines, areas, fees and fulfilment partners are not configured in this Phase 1 demo.",
+        "Delivery timelines, areas, fees and fulfilment partners will be confirmed with the business.",
       ],
       [
         "Confirmation",
@@ -34,11 +34,12 @@ const pages: Record<
   },
   privacy: {
     title: "Privacy",
-    intro: "This demo does not send forms to a backend or require an account.",
+    intro:
+      "This website does not require an account. Contact details are only shared when you choose to continue an enquiry.",
     sections: [
       [
-        "Demo behaviour",
-        "Cart data may be stored locally in your browser. Checkout and enquiry forms are not transmitted by this site.",
+        "Website behaviour",
+        "Cart data may be stored locally in your browser. Checkout and enquiry details are only shared when you choose to continue through WhatsApp.",
       ],
       [
         "Before launch",
@@ -48,11 +49,12 @@ const pages: Record<
   },
   terms: {
     title: "Terms of use",
-    intro: "Starter terms for a Phase 1 demonstration website.",
+    intro:
+      "These terms provide general guidance for using the CCTV Care website.",
     sections: [
       [
         "Illustrative content",
-        "Catalog prices, inventory, projects and service claims are illustrative and must be verified.",
+        "Catalog prices, inventory, project details and service claims should be confirmed with the business before purchase or engagement.",
       ],
       [
         "Before launch",

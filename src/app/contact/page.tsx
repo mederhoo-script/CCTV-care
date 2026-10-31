@@ -12,8 +12,8 @@ export default function Contact() {
             Let’s talk about your security needs.
           </h1>
           <p className="mt-5 leading-8 text-ink/65">
-            Use the demo form or contact details below. No message is sent or
-            saved by this Phase 1 website.
+            Use the enquiry form or contact details below. Choose WhatsApp after
+            completing the form to send your message to the team.
           </p>
           <div className="mt-8 grid gap-4 text-sm">
             <a
@@ -65,11 +65,12 @@ export default function Contact() {
           </label>
           {sent ? (
             <p className="mt-5 rounded-xl bg-emerald-50 p-4 text-sm font-bold text-emerald-800">
-              Demo enquiry prepared. It was not sent to a service.
+              Your enquiry is ready. It has not been sent until you choose to
+              continue with the business team.
             </p>
           ) : (
             <button className="mt-5 rounded-xl bg-blue px-6 py-3 font-bold text-white">
-              Prepare demo enquiry
+              Prepare enquiry
             </button>
           )}
         </form>

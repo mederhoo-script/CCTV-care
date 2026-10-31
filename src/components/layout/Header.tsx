@@ -22,7 +22,8 @@ export function Header() {
             <div className="flex items-center gap-8 px-4">
               <span>Professional surveillance solutions across Nigeria</span>
               <span>
-                Demo storefront — prices and checkout are illustrative.
+                Online catalogue — prices and checkout details are confirmed
+                with the team.
               </span>
               <span>Nationwide installation and technical support.</span>
               <span>Browse cameras, kits, recorders and accessories.</span>
@@ -30,7 +31,8 @@ export function Header() {
             <div className="flex items-center gap-8 px-4" aria-hidden="true">
               <span>Professional surveillance solutions across Nigeria</span>
               <span>
-                Demo storefront — prices and checkout are illustrative.
+                Online catalogue — prices and checkout details are confirmed
+                with the team.
               </span>
               <span>Nationwide installation and technical support.</span>
               <span>Browse cameras, kits, recorders and accessories.</span>

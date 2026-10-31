@@ -25,7 +25,7 @@ export default function Projects() {
             />
             <div className="p-6">
               <span className="text-xs font-bold uppercase tracking-wider text-blue">
-                {p.type} · Demo concept
+                {p.type} · Project concept
               </span>
               <h2 className="mt-2 text-xl font-black text-navy">{p.title}</h2>
               <p className="mt-3 text-sm leading-6 text-ink/65">

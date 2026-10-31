@@ -10,6 +10,6 @@ export const site = {
   location: "Serving homes and businesses across Nigeria",
   currency: "NGN",
   coverage: "Nationwide service coverage",
-  demoNotice:
-    "Demo mode: this website uses illustrative catalog data. No order, payment or enquiry is sent to a backend.",
+  catalogueNotice:
+    "Catalogue prices and availability are subject to confirmation. Enquiries are prepared for direct business follow-up.",
 };

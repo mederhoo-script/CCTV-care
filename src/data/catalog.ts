@@ -274,7 +274,7 @@ const products: Product[] = [
     slug: slug as string,
     name: name as string,
     shortDescription: shortDescription as string,
-    description: `${name} is a carefully selected demo product for dependable surveillance installations. Talk to our team for compatibility guidance and a tailored recommendation for your property.`,
+    description: `${name} is a carefully selected product for dependable surveillance installations. Talk to our team for compatibility guidance and a tailored recommendation for your property.`,
     priceNGN: priceNGN as number,
     compareAtPriceNGN: i % 4 === 0 ? (priceNGN as number) + 18000 : undefined,
     categoryId: categoryId as string,
@@ -410,34 +410,31 @@ export const services: Service[] = [
 ];
 export const projects: Project[] = [
   {
-    slug: "home-coverage-demo",
+    slug: "home-coverage",
     title: "Home coverage concept",
     type: "Residential",
-    location: "Demo project",
+    location: "Residential project concept",
     description:
       "A considered four-camera concept focused on entrances and shared outdoor areas.",
     image: images.references.home,
-    demo: true,
   },
   {
-    slug: "retail-visibility-demo",
+    slug: "retail-visibility",
     title: "Retail visibility concept",
     type: "Business",
-    location: "Demo project",
+    location: "Business project concept",
     description:
       "A practical layout concept for point-of-sale, entrances and customer areas.",
     image: images.references.office,
-    demo: true,
   },
   {
-    slug: "warehouse-monitoring-demo",
+    slug: "warehouse-monitoring",
     title: "Warehouse monitoring concept",
     type: "Industrial",
-    location: "Demo project",
+    location: "Industrial project concept",
     description:
       "A scalable surveillance approach for wide spaces and key access points.",
     image: images.references.installation,
-    demo: true,
   },
 ];
 export const faqs: FAQ[] = [
@@ -457,13 +454,13 @@ export const faqs: FAQ[] = [
     category: "Store",
     question: "Are the prices on the store live inventory prices?",
     answer:
-      "No. These are illustrative demo prices for Phase 1. Confirmed availability and pricing should be agreed before purchase.",
+      "Prices and availability are subject to confirmation before purchase.",
   },
   {
     category: "Store",
     question: "How do I ask about a product?",
     answer:
-      "Use the product enquiry action or contact the team. In demo mode, WhatsApp actions only open a prefilled message when a number is configured.",
+      "Use the product enquiry action or contact the team. WhatsApp opens a prefilled message when a verified business number is configured.",
   },
   {
     category: "Support",
@@ -472,10 +469,10 @@ export const faqs: FAQ[] = [
       "Maintenance and troubleshooting are part of our service offering. Request a quote to discuss a suitable support arrangement.",
   },
   {
-    category: "Demo",
+    category: "Checkout",
     question: "Is checkout a real payment flow?",
     answer:
-      "No. Checkout is a front-end demonstration. The current handoff prepares a WhatsApp message and does not charge a card or create an order.",
+      "Checkout prepares a WhatsApp enquiry for the business team. It does not charge a card or create an order.",
   },
 ];
 export const getProduct = (slug: string) =>

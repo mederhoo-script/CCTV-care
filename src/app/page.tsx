@@ -114,8 +114,8 @@ export default function Home() {
             </h2>
             <p className="mt-3 max-w-xl leading-7 text-white/65">
               Tell us what you want to monitor and we’ll help you shape a
-              practical starting point. This demo form does not submit to a
-              backend.
+              practical starting point. Our team will confirm the right solution
+              and next steps with you.
             </p>
           </div>
           <Link

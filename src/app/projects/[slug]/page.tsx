@@ -22,12 +22,12 @@ export default function Project({ params }: { params: { slug: string } }) {
           alt={p.title}
         />
         <div>
-          <p className="eyebrow">{p.type} · Illustrative demo</p>
+          <p className="eyebrow">{p.type} · Project concept</p>
           <h1 className="mt-3 text-4xl font-black text-navy">{p.title}</h1>
           <p className="mt-5 text-lg leading-8 text-ink/65">{p.description}</p>
           <p className="mt-6 rounded-xl bg-mist p-4 text-sm leading-6 text-ink/60">
-            This is demonstration content, not a claim of a completed verified
-            installation.
+            This project profile is provided as a planning reference and is not
+            a claim of a completed verified installation.
           </p>
           <Link
             className="mt-7 inline-block rounded-xl bg-blue px-6 py-3 font-bold text-white"

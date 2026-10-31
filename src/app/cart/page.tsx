@@ -75,7 +75,7 @@ export default function CartPage() {
               <span>{formatNaira(total)}</span>
             </div>
             <p className="mt-4 text-xs leading-5 text-ink/55">
-              Demo cart only. Shipping and final pricing are confirmed before a
+              Shipping and final pricing are confirmed with the team before a
               real purchase.
             </p>
             <Link

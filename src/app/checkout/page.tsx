@@ -21,7 +21,7 @@ export default function CheckoutPage() {
   const [error, setError] = useState("");
   const update = (key: string, value: string) =>
     setForm({ ...form, [key]: value });
-  const message = `Hello CCTV Care, I would like to discuss this demo cart selection:\n${rows.map((r) => `- ${r.product.name} x${r.quantity}`).join("\n")}\nEstimated items total: ${formatNaira(total)}\nName: ${form.name}\nPhone: ${form.phone}\nLocation: ${form.city}, ${form.state}\nPlease confirm availability, delivery and final pricing.`;
+  const message = `Hello CCTV Care, I would like to discuss this cart selection:\n${rows.map((r) => `- ${r.product.name} x${r.quantity}`).join("\n")}\nEstimated items total: ${formatNaira(total)}\nName: ${form.name}\nPhone: ${form.phone}\nLocation: ${form.city}, ${form.state}\nPlease confirm availability, delivery and final pricing.`;
   const link = whatsappUrl(message);
   function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -50,7 +50,7 @@ export default function CheckoutPage() {
     );
   return (
     <div className="container py-14">
-      <p className="eyebrow">Demo checkout</p>
+      <p className="eyebrow">Checkout enquiry</p>
       <h1 className="mt-3 text-4xl font-black text-navy">
         Review your enquiry
       </h1>
@@ -110,7 +110,7 @@ export default function CheckoutPage() {
           {done ? (
             <div className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50 p-5">
               <h2 className="font-bold text-emerald-800">
-                Your demo enquiry is ready
+                Your enquiry is ready
               </h2>
               <p className="mt-2 text-sm leading-6 text-emerald-800/80">
                 No order was created and no personal information was sent by

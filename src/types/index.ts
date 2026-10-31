@@ -39,7 +39,6 @@ export type Project = {
   location?: string;
   description: string;
   image: string;
-  demo: boolean;
 };
 export type FAQ = { question: string; answer: string; category: string };
 export type CartItem = { productId: string; quantity: number };

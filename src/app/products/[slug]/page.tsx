@@ -95,8 +95,8 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
             )}
           </div>
           <div className="mt-8 rounded-2xl bg-mist p-5 text-sm leading-6 text-ink/65">
-            Delivery estimates are illustrative and will be confirmed with the
-            team. This demo does not reserve stock or create an order.
+            Delivery estimates will be confirmed with the team. This enquiry
+            does not reserve stock or create an order.
           </div>
           <div className="mt-8 border-t border-line pt-7">
             <h2 className="font-bold text-navy">Specifications</h2>

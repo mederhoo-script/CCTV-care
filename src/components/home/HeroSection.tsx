@@ -131,7 +131,7 @@ export function HeroSection() {
           <div className="mt-3 hidden justify-center gap-5 text-xs font-bold text-white sm:flex">
             <span>
               <CheckCircle2 className="mr-1 inline text-blue-200" size={15} />
-              Demo-ready catalogue
+              Curated catalogue
             </span>
             <span>
               <CheckCircle2 className="mr-1 inline text-blue-200" size={15} />

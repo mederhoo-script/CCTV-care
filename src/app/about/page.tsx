@@ -8,9 +8,8 @@ export default function About() {
           Security work should feel clear, considered and dependable.
         </h1>
         <p className="mt-6 text-lg leading-8 text-ink/65">
-          CCTV Care is a Phase 1 demo experience for a Nigerian surveillance
-          business offering equipment, installation, maintenance and practical
-          technical support.
+          CCTV Care is a Nigerian surveillance business offering equipment,
+          installation, maintenance and practical technical support.
         </p>
         <div className="mt-12 grid gap-5 md:grid-cols-3">
           {[
